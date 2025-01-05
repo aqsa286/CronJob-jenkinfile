@@ -12,3 +12,5 @@ pipeline {
         }
     }
 }
+
+// you can del. this Pipelne dir bcz it's a jenkins pipeline.
