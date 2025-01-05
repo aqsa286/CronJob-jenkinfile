@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+              checkout scmGit(branches: [[name: 'remotes/origin/main']], 
+              extensions: [cloneOption(honorRefspec: true, noTags: true, reference: '', 
+              shallow: false),  localBranch('main')], 
+              userRemoteConfigs: [[url: 'https://github.com/aqsa286/CronJob-jenkinfile.git']])
+              sh "ls -ltr"
+          }
+        }
+    }
+}
